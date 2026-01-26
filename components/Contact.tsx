@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
 
                 {/* LinkedIn */}
                 <a 
-                  href="https://www.linkedin.com/in/davide-contreras-huerta-81620138b/" 
+                  href="https://www.linkedin.com/in/davide-contreras-81620138b/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group flex items-center gap-5 p-6 rounded-2xl bg-blue-500/5 hover:bg-blue-500/10 transition-all border border-blue-500/10 hover:border-blue-500/40"
