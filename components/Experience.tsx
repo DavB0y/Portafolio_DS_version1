@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Experience: React.FC = () => {
   const items = [
     {
-      role: "Asesor Técnico de Ventas",
+      role: "Soporte Tecnico TI",
       company: "Independiente",
       period: "Ene 2023 – Presente",
       desc: [
@@ -19,7 +19,7 @@ const Experience: React.FC = () => {
     {
       role: "Atención al Cliente & Logística",
       company: "StandHouse – Tienda de Accesorios",
-      period: "Ene 2019 – Dic 2019",
+      period: "Ene 2019 – Oct 2019",
       desc: [
         "Logística y control de stock: Gestión eficiente del inventario y aprovisionamiento de productos.",
         "Atención al cliente: Focalización en la experiencia del usuario y cumplimiento estricto de metas de venta mensuales.",
