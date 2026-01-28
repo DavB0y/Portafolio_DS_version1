@@ -37,7 +37,7 @@ const About: React.FC = () => {
             </div>
             <h2 className="text-4xl md:text-5xl font-black">Sobre Mí</h2>
             <p className="text-dark-text text-xl leading-relaxed font-light">
-              Estudiante de Ingeniería de Sistemas <span className="text-white font-medium">(Tercio Superior)</span> con formación técnica respaldada por certificaciones Cisco en hardware, redes, ciberseguridad e IA moderna. Experiencia en soporte técnico, optimización de equipos, respaldos críticos y asesoría tecnológica orientada a resultados.
+              Estudiante de Ingeniería de Sistemas <span className="text-white font-medium">(Quinto Superior)</span> con formación técnica respaldada por certificaciones Cisco en hardware, redes, ciberseguridad e IA moderna. Experiencia en soporte técnico, optimización de equipos, respaldos críticos y asesoría tecnológica orientada a resultados.
             </p>
           </motion.div>
 
