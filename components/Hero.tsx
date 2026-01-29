@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-wrap gap-3 pt-8 border-t border-dark-border">
             <div className="flex items-center gap-2 py-2 px-4 rounded-lg bg-dark-card border border-dark-border">
               <span className="material-symbols-outlined text-primary-500">workspace_premium</span>
-              <span className="text-sm font-bold uppercase tracking-tight">Tercio Superior</span>
+              <span className="text-sm font-bold uppercase tracking-tight">Quinto Superior</span>
             </div>
             <div className="flex items-center gap-2 py-2 px-4 rounded-lg bg-dark-card border border-dark-border">
               <span className="material-symbols-outlined text-primary-500">verified_user</span>
