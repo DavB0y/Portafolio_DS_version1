@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Experience: React.FC = () => {
   const items = [
     {
-      role: "Soporte Tecnico TI",
+      role: "Técnico de Soporte TI",
       company: "Independiente",
       period: "Ene 2023 – Presente",
       desc: [
