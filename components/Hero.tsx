@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
 
           <div className="flex flex-wrap gap-4">
             <a 
-              href="https://drive.google.com/drive/folders/1R6oFeoR-65Gh0DsZZB69O790z0MLYSKw?usp=drive_link"
+              href="https://drive.google.com/drive/folders/1R6oFeoR-65Gh0DsZZB69O790z0MLYSKw?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 h-14 px-8 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-bold transition-all shadow-xl shadow-primary-500/25"
@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
               Descargar CV
             </a>
             <a 
-              href="https://drive.google.com/drive/folders/1ODvyg_dmiox4ET34e0BhgAX6dvd0UiBJ?usp=sharing" 
+              href="https://drive.google.com/drive/folders/1BFiPUtz5ASF2YF3Yvbrau53uua3M92_N?usp=sharing" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 h-14 px-8 rounded-xl border border-dark-border bg-dark-card/50 hover:bg-dark-card text-white font-bold transition-all"
