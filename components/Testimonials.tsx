@@ -94,6 +94,7 @@ const Testimonials: React.FC = () => {
                       updated[idx].likes += 1;
                       setReviews(updated);
                     }}
+                    >
                     <span className="material-symbols-outlined text-lg">thumb_up</span>
                     <span className="text-xs font-bold">{rev.likes}</span>
                   </div>
