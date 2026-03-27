@@ -113,7 +113,7 @@ const Hero: React.FC = () => {
           <div className="relative w-full max-w-[500px] aspect-square rounded-2xl overflow-hidden bg-dark-card border border-dark-border shadow-2xl flex items-center justify-center p-4">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-transparent opacity-40"></div>
             <img 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGzg3gGC27wzbWMo-ratSD8I53rhcmFz-esDRRDtDWyDdpUNck403rsMpy7vEBOpayw1XvNEe3UGePeEUpnf1LjoUn_iLsAUOZRSC5esrJmsuFFhmGqxTFWmIRFUCVe7qZZ53tZ5cOux8Rmym50vJp1mNKunDY_y6M67q9NzKMUxujVxONwPX8zrp-ew7j2Z95-QG-b3ByDIuE6i6wUB0VTzVd5EEm07e4Rf9sby6DZxMXhrDe3uSKABj6yjJpnevj9InsQoSAPIE" 
+              src="/img_web.jpeg" 
               alt="Visual abstracto tecnológico"
               className="w-full h-full object-contain drop-shadow-2xl animate-pulse"
               style={{ animationDuration: '4s' }}
