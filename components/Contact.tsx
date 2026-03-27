@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
 
                 {/* Email */}
                 <a 
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=davidecontrerashuerta10@gmail.com&su=Contacto%20desde%20mi%20portafolio&body=Hola%20David,%20vi%20tu%20portafolio%20y%20quiero%20contactarte"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=davidecontrerashuerta10@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-5 p-6 rounded-2xl bg-primary-500/5 hover:bg-primary-500/10 transition-all border border-primary-500/10 hover:border-primary-500/40"
