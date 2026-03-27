@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
 
                 {/* Email */}
                 <a 
-                  href="mailto:davidecontrerashuerta10@gmail.com"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=davidecontrerashuerta10@gmail.com"
                   className="group flex items-center gap-5 p-6 rounded-2xl bg-primary-500/5 hover:bg-primary-500/10 transition-all border border-primary-500/10 hover:border-primary-500/40"
                 >
                   <div className="w-14 h-14 rounded-xl bg-primary-500/20 text-primary-500 flex items-center justify-center group-hover:scale-110 transition-transform">
