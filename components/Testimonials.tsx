@@ -3,29 +3,38 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Testimonials: React.FC = () => {
-  const reviews = [
-    {
-      name: "Carla R.",
-      role: "Usuaria particular",
-      text: "Excelente servicio. Diagnosticó el problema rápidamente y la laptop quedó mucho más rápida después del upgrade.",
-      rating: 5,
-      likes: 12
-    },
-    {
-      name: "María L.",
-      role: "Emprendedora",
-      text: "Muy buena asesoría para el respaldo y la migración a la nube. El proceso fue seguro, claro y bien organizado.",
-      rating: 4.5,
-      likes: 8
-    },
-    {
-      name: "Jorge P.",
-      role: "Técnico administrativo",
-      text: "Me ayudó a elegir los componentes adecuados sin gastar de más. Brinda confianza y explica cada paso con claridad.",
-      rating: 4.5,
-      likes: 15
-    }
-  ];
+  const [reviews, setReviews] = React.useState(() => {
+  const saved = localStorage.getItem("reviews");
+  return saved
+    ? JSON.parse(saved)
+    : [
+        {
+          name: "Carla R.",
+          role: "Usuaria particular",
+          text: "Excelente servicio. Diagnosticó el problema rápidamente y la laptop quedó mucho más rápida después del upgrade.",
+          rating: 5,
+          likes: 12,
+        },
+        {
+          name: "María L.",
+          role: "Emprendedora",
+          text: "Muy buena asesoría para el respaldo y la migración a la nube. El proceso fue seguro, claro y bien organizado.",
+          rating: 4.5,
+          likes: 8,
+        },
+        {
+          name: "Jorge P.",
+          role: "Técnico administrativo",
+          text: "Me ayudó a elegir los componentes adecuados sin gastar de más. Brinda confianza y explica cada paso con claridad.",
+          rating: 4.5,
+          likes: 15,
+        },
+      ];
+});
+
+  React.useEffect(() => {
+  localStorage.setItem("reviews", JSON.stringify(reviews));
+}, [reviews]);
 
   return (
     <section id="testimonios" className="py-24 bg-dark-bg/50">
@@ -78,7 +87,13 @@ const Testimonials: React.FC = () => {
                 </p>
 
                 <div className="pt-6 border-t border-dark-border flex justify-between items-center relative z-10">
-                  <div className="flex items-center gap-2 text-dark-text hover:text-white cursor-pointer transition-colors">
+                  <div
+                      className="flex items-center gap-2 text-dark-text hover:text-white cursor-pointer transition-colors"
+                      onClick={() => {
+                      const updated = [...reviews];
+                      updated[idx].likes += 1;
+                      setReviews(updated);
+                    }}
                     <span className="material-symbols-outlined text-lg">thumb_up</span>
                     <span className="text-xs font-bold">{rev.likes}</span>
                   </div>
