@@ -90,10 +90,16 @@ const Testimonials: React.FC = () => {
                   <div
                       className="flex items-center gap-2 text-dark-text hover:text-white cursor-pointer transition-colors"
                       onClick={() => {
-                      const updated = [...reviews];
-                      updated[idx].likes += 1;
-                      setReviews(updated);
-                    }}
+                        const liked = JSON.parse(localStorage.getItem("liked") || "[]");
+                        
+                        if (liked.includes(idx)) return;
+                        
+                        const updated = [...reviews];
+                        updated[idx].likes += 1;
+                        setReviews(updated);
+
+                        localStorage.setItem("liked", JSON.stringify([...liked, idx]));
+                      }}
                     >
                     <span className="material-symbols-outlined text-lg">thumb_up</span>
                     <span className="text-xs font-bold">{rev.likes}</span>
