@@ -53,8 +53,16 @@ const Hero: React.FC = () => {
               <span className="text-xs font-bold text-primary-300 uppercase tracking-widest">Disponible para trabajar</span>
             </div>
             
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-white">
-              Soporte Técnico · Backups & Migración · Consultoría Tecnológica
+            <h1 className="font-black leading-tight tracking-tight text-white">
+              <span className="block text-3xl md:text-5xl lg:text-6xl">
+               Soporte Técnico
+              </span>
+              <span className="block text-3xl md:text-5xl lg:text-6xl">
+               Backups & Migración
+              </span>
+              <span className="block text-3xl md:text-5xl lg:text-6xl text-primary-400">
+               Consultoría Tecnológica
+              </span>
             </h1>
             
             <p className="text-dark-text text-lg max-w-xl leading-relaxed">
