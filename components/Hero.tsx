@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
               <span className="text-xs font-bold text-primary-300 uppercase tracking-widest">Disponible para trabajar</span>
             </div>
             
-            <h1 className="text-xl md:text-7xl font-semibold text-primary-200">
+            <h1 className="text-xl md:text-7xl font-black leading-none tracking-tight">
               Soporte Técnico · Backups & Migración · Consultoría Tecnológica
             </h1>
             
