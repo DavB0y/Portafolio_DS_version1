@@ -47,7 +47,6 @@ const Testimonials: React.FC = () => {
                 viewport={{ once: true }}
                 className="relative p-8 rounded-3xl bg-dark-card border border-dark-border flex flex-col gap-6 group overflow-hidden"
               >
-                <span className="material-symbols-outlined absolute -top-4 -right-4 text-9xl text-white/5 pointer-events-none select-none">format_quote</span>
                 
                 <div className="flex items-center gap-4 relative z-10">
                   <div className="w-12 h-12 rounded-full bg-primary-500/20 flex items-center justify-center text-primary-500 font-bold text-lg border border-primary-500/30">
