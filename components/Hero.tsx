@@ -53,14 +53,9 @@ const Hero: React.FC = () => {
               <span className="text-xs font-bold text-primary-300 uppercase tracking-widest">Disponible para trabajar</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-black leading-none tracking-tight">
-              Davide Contreras <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-blue-600">Huerta</span>
-            </h1>
-            
-            <h2 className="text-xl md:text-2xl font-semibold text-primary-200">
+            <h1 className="text-xl md:text-7xl font-semibold text-primary-200">
               Soporte Técnico · Backups & Migración · Consultoría Tecnológica
-            </h2>
+            </h1>
             
             <p className="text-dark-text text-lg max-w-xl leading-relaxed">
               Soluciones técnicas confiables para optimizar equipos, proteger datos y tomar mejores decisiones de compra.
