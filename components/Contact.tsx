@@ -48,8 +48,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-xs font-black text-green-500 uppercase tracking-widest mb-1">WhatsApp</p>
-                    <p className="text-white text-lg font-bold">Chat Directo 24/7</p>
-                    <p className="text-dark-text text-sm font-medium">926 533 855</p>
+                    <p className="text-white text-lg font-bold">Chat Directo</p>
                   </div>
                   <span className="material-symbols-outlined ml-auto text-slate-600 group-hover:text-white transition-colors">arrow_forward</span>
                 </a>
