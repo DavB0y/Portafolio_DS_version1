@@ -141,14 +141,14 @@ const Testimonials: React.FC = () => {
           <div className="relative">
             <button
               onClick={prevReviews}
-              className="hidden md:flex absolute left-[-22px] top-1/2 -translate-y-1/2 z-10 w-11 h-11 items-center justify-center rounded-full border border-dark-border bg-dark-card text-white hover:border-primary-500 hover:text-primary-500 transition"
+              className="hidden md:flex absolute left-[-50px] top-1/2 -translate-y-1/2 z-10 w-11 h-11 items-center justify-center rounded-full border border-dark-border bg-dark-card text-white hover:border-primary-500 hover:text-primary-500 transition"
             >
               <span className="material-symbols-outlined">chevron_left</span>
             </button>
 
             <button
               onClick={nextReviews}
-              className="hidden md:flex absolute right-[-22px] top-1/2 -translate-y-1/2 z-10 w-11 h-11 items-center justify-center rounded-full border border-dark-border bg-dark-card text-white hover:border-primary-500 hover:text-primary-500 transition"
+              className="hidden md:flex absolute right-[-50px] top-1/2 -translate-y-1/2 z-10 w-11 h-11 items-center justify-center rounded-full border border-dark-border bg-dark-card text-white hover:border-primary-500 hover:text-primary-500 transition"
             >
               <span className="material-symbols-outlined">chevron_right</span>
             </button>
