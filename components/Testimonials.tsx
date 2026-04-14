@@ -12,7 +12,7 @@ type Review = {
 const defaultReviews: Review[] = [
   {
     name: "Carla R.",
-    role: "Usuaria particular",
+    role: "Estudiante",
     text: "Excelente servicio. Diagnosticó el problema rápidamente y la laptop quedó mucho más rápida después del upgrade.",
     rating: 4,
     likes: 12,
@@ -82,7 +82,7 @@ const defaultReviews: Review[] = [
 },
 {
   name: "Fernando G.",
-  role: "Ingeniero",
+  role: "Estudiante",
   text: "Detectó un problema crítico en el sistema y lo solucionó antes de que afectara la operación.",
   rating: 5,
   likes: 20,
@@ -96,7 +96,7 @@ const defaultReviews: Review[] = [
 },
 {
   name: "Kevin R.",
-  role: "Soporte TI",
+  role: "Usuario",
   text: "Muy buen conocimiento técnico. Me ayudó a resolver errores complejos.",
   rating: 4.5,
   likes: 14,
