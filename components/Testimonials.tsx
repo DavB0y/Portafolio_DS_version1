@@ -149,7 +149,7 @@ const defaultReviews: Review[] = [
   text: "Nos ayudó con la configuración de varios equipos en el área de logística y después de eso todo quedó funcionando bien",
   rating: 4.5,
   likes: 15,
-}
+},
   {
     name: "Aldahir B.",
     role: "Enfermero",
