@@ -106,7 +106,7 @@ const defaultReviews: Review[] = [
   role: "Marketing Digital",
   text: "Después de la optimización los programas cargan mucho más rápido y se notó bastante la diferencia",
   rating: 4,
-  likes: 8,
+  likes: 9,
 },
 {
   name: "Luis A.",
