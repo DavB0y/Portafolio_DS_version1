@@ -67,13 +67,6 @@ const defaultReviews: Review[] = [
   likes: 9,
 },
 {
-  name: "Roberto S.",
-  role: "Administrador",
-  text: "Configuró la red de la oficina y desde entonces la conexión es mucho más estable en todos los equipos",
-  rating: 5,
-  likes: 16,
-},
-{
   name: "Lucía P.",
   role: "Emprendedora",
   text: "Me ayudó a elegir y configurar los equipos para mi trabajo y todo quedó funcionando sin problemas",
@@ -81,25 +74,11 @@ const defaultReviews: Review[] = [
   likes: 12,
 },
 {
-  name: "Fernando G.",
-  role: "Estudiante",
-  text: "Tenía un problema que no lograba identificar y lo solucionó rápido antes de que empeorara",
-  rating: 5,
-  likes: 20,
-},
-{
   name: "Patricia M.",
   role: "Usuario",
   text: "Los equipos estaban lentos y después de la optimización mejoraron bastante en el uso diario",
   rating: 4,
   likes: 11,
-},
-{
-  name: "Kevin R.",
-  role: "Usuario",
-  text: "Me ayudó a resolver varios errores que no podía solucionar por mi cuenta dejando todo funcionando bien",
-  rating: 4.5,
-  likes: 14,
 },
 {
   name: "Andrea F.",
