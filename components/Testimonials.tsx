@@ -41,7 +41,7 @@ const defaultReviews: Review[] = [
   {
     name: "Andrea C.",
     role: "Administradora",
-    text: "Muy profesional. Me ayudó con respaldo de archivos y optimización del sistema sin perder información.",
+    text: 'Muy profesional. Me ayudó con respaldo de archivos y optimización del sistema sin perder información.',
     rating: 5,
     likes: 14,
   },
@@ -68,24 +68,24 @@ const Testimonials: React.FC = () => {
   const itemsPerPage = 3;
 
   React.useEffect(() => {
-  if (typeof window !== "undefined") {
-    const saved = localStorage.getItem("reviews");
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("reviews");
 
-    if (saved) {
-      const parsed = JSON.parse(saved);
+      if (saved) {
+        const parsed = JSON.parse(saved);
 
-      if (parsed.length < defaultReviews.length) {
+        if (parsed.length < defaultReviews.length) {
+          localStorage.setItem("reviews", JSON.stringify(defaultReviews));
+          setReviews(defaultReviews);
+        } else {
+          setReviews(parsed);
+        }
+      } else {
         localStorage.setItem("reviews", JSON.stringify(defaultReviews));
         setReviews(defaultReviews);
-      } else {
-        setReviews(parsed);
       }
-    } else {
-      localStorage.setItem("reviews", JSON.stringify(defaultReviews));
-      setReviews(defaultReviews);
     }
-  }
-}, []);
+  }, []);
 
   React.useEffect(() => {
     if (reviews.length > 0 && typeof window !== "undefined") {
@@ -100,13 +100,13 @@ const Testimonials: React.FC = () => {
   };
 
   const prevReviews = () => {
-  setStartIndex((prev) => {
-    if (prev === 0) {
-      return Math.floor((reviews.length - 1) / itemsPerPage) * itemsPerPage;
-    }
-    return prev - itemsPerPage;
-  });
-};
+    setStartIndex((prev) => {
+      if (prev === 0) {
+        return Math.floor((reviews.length - 1) / itemsPerPage) * itemsPerPage;
+      }
+      return prev - itemsPerPage;
+    });
+  };
 
   const visibleReviews = reviews.slice(startIndex, startIndex + itemsPerPage);
 
@@ -138,92 +138,107 @@ const Testimonials: React.FC = () => {
             </p>
           </div>
 
-          {/* Botones */}
-          <div className="flex justify-end gap-3">
+          <div className="relative">
             <button
               onClick={prevReviews}
-              className="w-11 h-11 rounded-full border border-dark-border bg-dark-card text-white hover:border-primary-500 hover:text-primary-500 transition"
+              className="hidden md:flex absolute left-[-22px] top-1/2 -translate-y-1/2 z-10 w-11 h-11 items-center justify-center rounded-full border border-dark-border bg-dark-card text-white hover:border-primary-500 hover:text-primary-500 transition"
             >
               <span className="material-symbols-outlined">chevron_left</span>
             </button>
 
             <button
               onClick={nextReviews}
-              className="w-11 h-11 rounded-full border border-dark-border bg-dark-card text-white hover:border-primary-500 hover:text-primary-500 transition"
+              className="hidden md:flex absolute right-[-22px] top-1/2 -translate-y-1/2 z-10 w-11 h-11 items-center justify-center rounded-full border border-dark-border bg-dark-card text-white hover:border-primary-500 hover:text-primary-500 transition"
             >
               <span className="material-symbols-outlined">chevron_right</span>
             </button>
-          </div>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={startIndex}
-              initial={{ opacity: 0, x: 60 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -60 }}
-              transition={{ duration: 0.35 }}
-              className="grid md:grid-cols-3 gap-8"
-            >
-              {visibleReviews.map((rev, idx) => (
-                <motion.div
-                  key={`${rev.name}-${idx}`}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3 }}
-                  className="relative p-8 rounded-3xl bg-dark-card border border-dark-border flex flex-col gap-6 group overflow-hidden"
-                >
-                  <div className="flex items-center gap-4 relative z-10">
-                    <div className="w-12 h-12 rounded-full bg-primary-500/20 flex items-center justify-center text-primary-500 font-bold text-lg border border-primary-500/30">
-                      {rev.name.substring(0, 2)}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={startIndex}
+                initial={{ opacity: 0, x: 60 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -60 }}
+                transition={{ duration: 0.35 }}
+                className="grid md:grid-cols-3 gap-8"
+              >
+                {visibleReviews.map((rev, idx) => (
+                  <motion.div
+                    key={`${rev.name}-${idx}`}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                    className="relative p-8 rounded-3xl bg-dark-card border border-dark-border flex flex-col gap-6 group overflow-hidden"
+                  >
+                    <div className="flex items-center gap-4 relative z-10">
+                      <div className="w-12 h-12 rounded-full bg-primary-500/20 flex items-center justify-center text-primary-500 font-bold text-lg border border-primary-500/30">
+                        {rev.name.substring(0, 2)}
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-white">{rev.name}</h4>
+                        <p className="text-dark-text text-sm">{rev.role}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-white">{rev.name}</h4>
-                      <p className="text-dark-text text-sm">{rev.role}</p>
+
+                    <div className="flex gap-1 text-primary-500">
+                      {[...Array(5)].map((_, i) => {
+                        const isFull = i < Math.floor(rev.rating);
+                        const isHalf =
+                          i === Math.floor(rev.rating) && rev.rating % 1 !== 0;
+
+                        return (
+                          <span
+                            key={i}
+                            className={`material-symbols-outlined text-[20px] ${
+                              isFull || isHalf ? "filled-icon" : ""
+                            }`}
+                          >
+                            {isHalf ? "star_half" : "star"}
+                          </span>
+                        );
+                      })}
                     </div>
-                  </div>
 
-                  <div className="flex gap-1 text-primary-500">
-                    {[...Array(5)].map((_, i) => {
-                      const isFull = i < Math.floor(rev.rating);
-                      const isHalf =
-                        i === Math.floor(rev.rating) && rev.rating % 1 !== 0;
+                    <p className="text-dark-text leading-relaxed italic relative z-10 flex-1">
+                      "{rev.text}"
+                    </p>
 
-                      return (
-                        <span
-                          key={i}
-                          className={`material-symbols-outlined text-[20px] ${
-                            isFull || isHalf ? "filled-icon" : ""
-                          }`}
-                        >
-                          {isHalf ? "star_half" : "star"}
+                    <div className="pt-6 border-t border-dark-border flex justify-between items-center relative z-10">
+                      <div
+                        className="flex items-center gap-2 text-dark-text hover:text-white cursor-pointer transition-colors"
+                        onClick={() => handleLike(rev.name)}
+                      >
+                        <span className="material-symbols-outlined text-lg">
+                          thumb_up
                         </span>
-                      );
-                    })}
-                  </div>
+                        <span className="text-xs font-bold">{rev.likes}</span>
+                      </div>
 
-                  <p className="text-dark-text leading-relaxed italic relative z-10 flex-1">
-                    "{rev.text}"
-                  </p>
-
-                  <div className="pt-6 border-t border-dark-border flex justify-between items-center relative z-10">
-                    <div
-                      className="flex items-center gap-2 text-dark-text hover:text-white cursor-pointer transition-colors"
-                      onClick={() => handleLike(rev.name)}
-                    >
-                      <span className="material-symbols-outlined text-lg">
-                        thumb_up
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                        Verificado
                       </span>
-                      <span className="text-xs font-bold">{rev.likes}</span>
                     </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </AnimatePresence>
 
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
-                      Verificado
-                    </span>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
+            <div className="flex justify-center gap-3 mt-6 md:hidden">
+              <button
+                onClick={prevReviews}
+                className="w-11 h-11 rounded-full border border-dark-border bg-dark-card text-white hover:border-primary-500 hover:text-primary-500 transition"
+              >
+                <span className="material-symbols-outlined">chevron_left</span>
+              </button>
+
+              <button
+                onClick={nextReviews}
+                className="w-11 h-11 rounded-full border border-dark-border bg-dark-card text-white hover:border-primary-500 hover:text-primary-500 transition"
+              >
+                <span className="material-symbols-outlined">chevron_right</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
