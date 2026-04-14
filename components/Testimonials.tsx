@@ -145,24 +145,11 @@ const Testimonials: React.FC = () => {
   const itemsPerPage = 3;
 
   React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("reviews");
-
-      if (saved) {
-        const parsed = JSON.parse(saved);
-
-        if (parsed.length < defaultReviews.length) {
-          localStorage.setItem("reviews", JSON.stringify(defaultReviews));
-          setReviews(defaultReviews);
-        } else {
-          setReviews(parsed);
-        }
-      } else {
-        localStorage.setItem("reviews", JSON.stringify(defaultReviews));
-        setReviews(defaultReviews);
-      }
-    }
-  }, []);
+  if (typeof window !== "undefined") {
+    setReviews(defaultReviews);
+    localStorage.setItem("reviews", JSON.stringify(defaultReviews));
+  }
+}, []);
 
   React.useEffect(() => {
     if (reviews.length > 0 && typeof window !== "undefined") {
