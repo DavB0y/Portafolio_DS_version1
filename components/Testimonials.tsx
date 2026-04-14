@@ -100,12 +100,13 @@ const Testimonials: React.FC = () => {
   };
 
   const prevReviews = () => {
-    setStartIndex((prev) =>
-      prev === 0
-        ? Math.max(reviews.length - itemsPerPage, 0)
-        : prev - itemsPerPage
-    );
-  };
+  setStartIndex((prev) => {
+    if (prev === 0) {
+      return Math.floor((reviews.length - 1) / itemsPerPage) * itemsPerPage;
+    }
+    return prev - itemsPerPage;
+  });
+};
 
   const visibleReviews = reviews.slice(startIndex, startIndex + itemsPerPage);
 
