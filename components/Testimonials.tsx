@@ -14,7 +14,7 @@ const defaultReviews: Review[] = [
     name: "Carla R.",
     role: "Usuaria particular",
     text: "Excelente servicio. Diagnosticó el problema rápidamente y la laptop quedó mucho más rápida después del upgrade.",
-    rating: 5,
+    rating: 4,
     likes: 12,
   },
   {
@@ -35,14 +35,14 @@ const defaultReviews: Review[] = [
     name: "Luis M.",
     role: "Marketing",
     text: "La instalación y configuración fue rápida. Mejoró bastante el rendimiento del equipo de trabajo.",
-    rating: 5,
+    rating: 4,
     likes: 10,
   },
   {
     name: "Andrea C.",
     role: "Administradora",
     text: 'Muy profesional. Me ayudó con respaldo de archivos y optimización del sistema sin perder información.',
-    rating: 5,
+    rating: 4,
     likes: 14,
   },
   {
