@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
                   <span className="block text-5xl sm:text-6xl md:text-7xl font-extrabold text-blue-500">
                       DC Technology
                     </span>
-                 <span className="block text-xl sm:text-2xl md:text-3xl font-semibold text-white mt-3">
+                 <span className="block text-xl sm:text-2xl md:text-3xl font-bold text-white mt-3">
                       Soporte y Soluciones TI
                     </span>
                   </h1>
