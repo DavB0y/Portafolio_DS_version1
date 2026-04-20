@@ -54,9 +54,9 @@ const Hero: React.FC = () => {
             </div>
             
          <h1 className="max-w-xl text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.1] tracking-tight">
-  <span className="text-white block">Soporte Técnico</span>
-  <span className="text-blue-500 block font-extrabold">Backups & Migración</span>
-  <span className="text-cyan-400 block font-extrabold">Consultoría Tecnológica</span>
+  <span className="text-cyan-400 block">
+    Soluciones Tecnológicas Integrales
+  </span>
 </h1>
             
             <p className="text-dark-text text-lg max-w-xl leading-relaxed">
