@@ -18,7 +18,7 @@ const Experience: React.FC = () => {
     },
     {
       role: "Atención al Cliente & Logística",
-      company: "StandHouse – Tienda de Accesorios",
+      company: "HouseTech – Tienda de Accesorios Tecnológicos",
       period: "Feb 2022 – Oct 2022",
       desc: [
         "Logística y control de stock: Gestión y control de inventario asegurando disponibilidad continua de productos.",
