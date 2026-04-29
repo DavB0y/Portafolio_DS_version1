@@ -7,7 +7,7 @@ const Experience: React.FC = () => {
     {
       role: "Técnico de Soporte TI",
       company: "Independiente",
-      period: "Ene 2023 – Presente",
+      period: "Mar 2023 – Presente",
       desc: [
         "Diagnóstico y repotenciación: Evaluación integral de hardware y software para optimizar el rendimiento de equipos de cómputo.",
         "Respaldos híbridos: Implementación estratégica de copias de seguridad tanto locales como en la nube para garantizar la integridad de los datos.",
@@ -19,11 +19,11 @@ const Experience: React.FC = () => {
     {
       role: "Atención al Cliente & Logística",
       company: "StandHouse – Tienda de Accesorios",
-      period: "Ene 2019 – Oct 2019",
+      period: "Feb 2022 – Oct 2022",
       desc: [
-        "Logística y control de stock: Gestión eficiente del inventario y aprovisionamiento de productos.",
-        "Atención al cliente: Focalización en la experiencia del usuario y cumplimiento estricto de metas de venta mensuales.",
-        "Resolución técnica: Primer nivel de soporte para consultas técnicas sobre accesorios y compatibilidad de dispositivos."
+        "Logística y control de stock: Gestión y control de inventario asegurando disponibilidad continua de productos.",
+        "Atención al cliente: Atención al cliente orientada a la experiencia del usuario y cumplimiento de objetivos de venta.",
+        "Resolución técnica: Soporte técnico de primer nivel en consultas sobre accesorios y compatibilidad de dispositivos."
       ],
       tags: ["Ventas", "Logística", "Atención al Cliente"],
       current: false
